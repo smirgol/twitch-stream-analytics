@@ -5,7 +5,7 @@ services:
             - "80:8080"
         volumes:
             - type: bind
-              source: /media/Gonzales/00_symfony/web
+              source: ../web
               target: /var/www/html
 # currently copied during build. you can opt to mount it instead
 #            - type: bind
@@ -21,5 +21,5 @@ services:
             MARIADB_ROOT_PASSWORD: root
         volumes:
             - type: bind
-              source: /media/Gonzales/00_symfony/data/db
+              source: ../data/db
               target: /var/lib/mysql

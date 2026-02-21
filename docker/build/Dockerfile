@@ -8,12 +8,12 @@ USER root
 RUN apk update && apk add composer bash htop php84-simplexml mariadb-client
 
 # pre-create composer cache folder and set permissions
-RUN mkdir -p /.composer/cache && chown 1000:1000 /.composer/cache
+RUN mkdir -p /.composer/cache && chown nobody:nobody /.composer/cache
 
 # cleanup
 RUN rm -rf /var/cache/apk
 
 COPY nginx.conf /etc/nginx/conf.d/symfony-web-root.conf
 
-USER 1000:1000
+USER nobody:nobody
 
