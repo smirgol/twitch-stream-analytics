@@ -1,8 +1,10 @@
 init:
 	mkdir -p data/db # create db directory
 
+
 up:
 	docker-compose -f docker/docker-compose.yaml up -d --build
+	$(MAKE) login-web
 down:
 	docker-compose -f docker/docker-compose.yaml down
 start:

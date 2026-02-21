@@ -4,9 +4,10 @@ services:
         ports:
             - "80:8080"
         volumes:
-            -   type: bind
-                source: /media/Gonzales/00_symfony/web
-                target: /var/www/html
+            - type: bind
+              source: /media/Gonzales/00_symfony/web
+              target: /var/www/html
+
     db:
         image: mariadb:latest
         restart: always

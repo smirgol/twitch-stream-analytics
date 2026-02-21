@@ -4,9 +4,13 @@ LABEL authors="smirgol"
 
 USER root
 
-RUN apk update
-RUN apk add composer
-RUN apk add bash
-RUN apk add htop
+# install software
+RUN apk update && apk add composer bash htop
+
+# pre-create composer cache folder and set permissions
+RUN mkdir -p /.composer/cache && chown 1000:1000 /.composer/cache
+
+# cleanup
+RUN rm -rf /var/cache/apk
 
 USER 1000:1000
