@@ -13,4 +13,7 @@ RUN mkdir -p /.composer/cache && chown 1000:1000 /.composer/cache
 # cleanup
 RUN rm -rf /var/cache/apk
 
-USER 1000:1000
+COPY nginx.conf /etc/nginx/conf.d/symfony-web-root.conf
+
+USER nobody:nobody
+

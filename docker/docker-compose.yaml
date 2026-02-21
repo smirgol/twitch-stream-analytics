@@ -7,6 +7,10 @@ services:
             - type: bind
               source: /media/Gonzales/00_symfony/web
               target: /var/www/html
+# currently copied during build. you can opt to mount it instead
+#            - type: bind
+#              source: /media/Gonzales/00_symfony/docker/nginx/nginx.conf
+#              target: /etc/nginx/conf.d/symfony-web-root.conf
 
     db:
         image: mariadb:latest
