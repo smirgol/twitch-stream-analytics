@@ -15,5 +15,5 @@ RUN rm -rf /var/cache/apk
 
 COPY nginx.conf /etc/nginx/conf.d/symfony-web-root.conf
 
-USER nobody:nobody
+USER 1000:1000
 
