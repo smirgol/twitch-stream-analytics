@@ -1,0 +1,18 @@
+# ignore IDE files
+.idea
+
+# ignore temporary files
+.~*
+
+# ignore docs
+/docs/*
+
+# ignore db + compressed files
+*.sql
+*.gz
+*.tar.gz
+*.bz2
+*.tar
+
+# ignore logs
+*.logs
