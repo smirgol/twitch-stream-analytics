@@ -5,7 +5,7 @@ LABEL authors="smirgol"
 USER root
 
 # install software
-RUN apk update && apk add composer bash htop php84-simplexml
+RUN apk update && apk add composer bash htop php84-simplexml mariadb-client
 
 # pre-create composer cache folder and set permissions
 RUN mkdir -p /.composer/cache && chown 1000:1000 /.composer/cache
