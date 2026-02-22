@@ -15,5 +15,9 @@ stop:
 restart: down up
 
 login-web:
-	docker-compose -f docker/docker-compose.yaml exec -u nobody:nobody web bash
+	docker-compose -f docker/docker-compose.yaml exec -u 1000:1000 web bash
+login-web-root:
+	docker-compose -f docker/docker-compose.yaml exec -u 0:0 web bash
 
+log:
+	docker-compose -f docker/docker-compose.yaml logs web -f
